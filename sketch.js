@@ -29,7 +29,7 @@ function setup() {
   pg = createGraphics(700, 700);
   pg.background(10, 12, 30);
 
- createP("✦ 作れる顕微鏡 ✦");
+ createP("✦ 作れる万華鏡 ✦");
 createP("自分だけの不思議な模様を作ろう");
   // カラーパレット
   createP("COLOR");
