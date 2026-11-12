@@ -1,5 +1,8 @@
 
-/* 基本設定 */
+/* =========================
+   基本設定
+========================= */
+
 * {
   box-sizing: border-box;
 }
@@ -15,21 +18,27 @@ html, body {
   text-align: center;
 }
 
-/* タイトルと説明 */
+/* =========================
+   タイトル・説明
+========================= */
+
 p {
-  margin: 12px 0;
+  margin: 16px 0;
   color: #d8e5ff;
-  font-size: 16px;
+  font-size: 17px;
 }
 
 p:first-of-type {
-  font-size: 28px;
+  font-size: 30px;
   font-weight: bold;
   color: #00e5ff;
   letter-spacing: 3px;
 }
 
-/* キャンバス */
+/* =========================
+   キャンバス
+========================= */
+
 canvas {
   display: block;
   width: min(92vw, 700px);
@@ -40,56 +49,89 @@ canvas {
   touch-action: none;
 }
 
-/* ボタン */
+/* =========================
+   すべてのボタン
+========================= */
+
 button {
   background: #202943;
   color: #ffffff;
   border: 1px solid #40547e;
-  border-radius: 8px;
-  padding: 10px 16px;
-  margin: 5px;
-  font-size: 15px;
+  border-radius: 12px;
+
+  min-width: 120px;
+  min-height: 58px;
+
+  padding: 15px 22px;
+  margin: 8px;
+
+  font-size: 17px;
+  font-weight: bold;
+
   cursor: pointer;
+  transition: 0.2s;
 }
 
 button:hover {
   background: #30466f;
   border-color: #00e5ff;
+  transform: translateY(-2px);
 }
 
-/* スライダー */
+button:active {
+  transform: scale(0.96);
+}
+
+/* =========================
+   スライダー
+========================= */
+
 input[type="range"] {
-  width: 180px;
+  width: 220px;
+  height: 40px;
   accent-color: #00e5ff;
+  cursor: pointer;
 }
 
-/* スマホ対応 */
+/* =========================
+   スマートフォン対応
+========================= */
+
 @media screen and (max-width: 600px) {
+
   body {
     padding: 12px;
   }
 
   p:first-of-type {
-    font-size: 23px;
+    font-size: 25px;
   }
 
   p {
-    font-size: 14px;
+    font-size: 17px;
+    margin: 18px 0 12px;
   }
 
   canvas {
     width: 94vw;
     height: auto;
-    margin: 12px auto;
+    margin: 15px auto;
   }
 
   button {
-    padding: 12px 14px;
-    min-height: 42px;
-    font-size: 14px;
+    min-width: 105px;
+    min-height: 58px;
+
+    padding: 14px 18px;
+    margin: 7px;
+
+    font-size: 16px;
+    border-radius: 12px;
   }
 
   input[type="range"] {
-    width: 140px;
+    width: 85%;
+    height: 45px;
   }
 }
+
