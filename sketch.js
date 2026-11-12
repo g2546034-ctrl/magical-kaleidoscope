@@ -207,3 +207,44 @@ function drawGlowingLine(x1, y1, x2, y2) {
   // 光の設定をリセット
   ctx.shadowBlur = 0;
 }
+
+// スマホで指を押したとき
+function touchStarted() {
+  if (isRotating) return false;
+
+  if (
+    mouseX >= 0 && mouseX <= width &&
+    mouseY >= 0 && mouseY <= height
+  ) {
+    isDrawing = true;
+
+    drawSymmetry(
+      mouseX - width / 2,
+      mouseY - height / 2,
+      mouseX - width / 2,
+      mouseY - height / 2
+    );
+  }
+
+  return false;
+}
+
+// 指を動かしたとき
+function touchMoved() {
+  if (isDrawing && !isRotating) {
+    drawSymmetry(
+      pmouseX - width / 2,
+      pmouseY - height / 2,
+      mouseX - width / 2,
+      mouseY - height / 2
+    );
+  }
+
+  return false;
+}
+
+// 指を離したとき
+function touchEnded() {
+  isDrawing = false;
+  return false;
+}
