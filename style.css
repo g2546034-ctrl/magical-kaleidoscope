@@ -1,7 +1,95 @@
+
+/* 基本設定 */
+* {
+  box-sizing: border-box;
+}
+
 html, body {
   margin: 0;
   padding: 0;
+  width: 100%;
+  min-height: 100%;
+  background: #0a0c1e;
+  color: #ffffff;
+  font-family: sans-serif;
+  text-align: center;
 }
+
+/* タイトルと説明 */
+p {
+  margin: 12px 0;
+  color: #d8e5ff;
+  font-size: 16px;
+}
+
+p:first-of-type {
+  font-size: 28px;
+  font-weight: bold;
+  color: #00e5ff;
+  letter-spacing: 3px;
+}
+
+/* キャンバス */
 canvas {
   display: block;
+  width: min(92vw, 700px);
+  height: auto;
+  margin: 20px auto;
+  border: 1px solid #263b68;
+  border-radius: 12px;
+  touch-action: none;
+}
+
+/* ボタン */
+button {
+  background: #202943;
+  color: #ffffff;
+  border: 1px solid #40547e;
+  border-radius: 8px;
+  padding: 10px 16px;
+  margin: 5px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #30466f;
+  border-color: #00e5ff;
+}
+
+/* スライダー */
+input[type="range"] {
+  width: 180px;
+  accent-color: #00e5ff;
+}
+
+/* スマホ対応 */
+@media screen and (max-width: 600px) {
+  body {
+    padding: 12px;
+  }
+
+  p:first-of-type {
+    font-size: 23px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  canvas {
+    width: 94vw;
+    height: auto;
+    margin: 12px auto;
+  }
+
+  button {
+    padding: 12px 14px;
+    min-height: 42px;
+    font-size: 14px;
+  }
+
+  input[type="range"] {
+    width: 140px;
+  }
 }
